@@ -1,0 +1,60 @@
+/* Global Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Styling */
+
+:root {
+
+  --base-900: #000;
+  --base: #0063F5;
+  --base-300: #7AAFFF;
+  --base-200: #E6EFFE;
+  --base-100: #F4F5FA;
+
+}
+
+main {
+  max-width: 144rem;
+  margin: 0 auto;
+}
