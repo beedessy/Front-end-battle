@@ -1,0 +1,193 @@
+/* Global Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Styling */
+
+:root {
+
+  --track-color: #6b8e25;
+  --track-end-color: red;
+
+  --racecar-color: #c33c3c;
+  --racecar-border-color: #000;
+
+  --start-button-color: #ffcc00;
+
+}
+
+main {
+  height: 70rem;
+  width: 100rem;
+}
+
+
+.race_track_container {
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr, 10);
+
+  height: 100%;
+  width: 100%;
+
+}
+
+.race_track_container::after {
+
+  content: '';
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  width: 8%;
+
+  opacity: .5;
+  background-color: var(--track-end-color);
+
+}
+
+.race_track {
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--track-color);
+
+}
+
+.race_track:not(:last-child) {
+  border-bottom: .4rem solid #000;
+}
+
+.race_track_start {
+  margin-left: 2rem;
+  width: 5%;
+}
+
+.race_track_number {
+
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-right: 10rem;
+
+}
+
+.racecar {
+
+  position: absolute;
+  top: 1.2rem;
+  left: 6rem;
+
+  height: 4rem;
+  width: 4rem;
+
+  border-radius: 100%;
+  border: .2rem solid var(--racecar-border-color);
+  background-color: var(--racecar-color);
+
+}
+
+.race_track_length {
+  width: 100%;
+}
+
+.start_button {
+  position: absolute;
+  top: 4rem;
+  right: 20rem;
+
+  padding: 1rem 2rem;
+  background-color: var(--start-button-color);
+
+  z-index: 999;
+}
+
+.leaderboard {
+
+  position: absolute;
+
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  right: 20rem;
+  bottom: 10rem;
+  width: 40rem;
+
+  flex-direction: column;
+
+  z-index: 999;
+
+  padding: 5rem;
+  background-color: gray;
+}
+
+.leaderboard_rank {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.rank {
+  text-align: center;
+}
+
+.rank > span {
+  font-weight: bold;
+  color: #fff;
+}
+
+.leaderboard > span {
+  font-weight: bold;
+  font-size: 3rem;
+}
